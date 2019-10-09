@@ -1,0 +1,177 @@
+page-chat {
+  // .card {
+  //  // background-color: rgba(146, 198, 199, 0.945);
+  //  // border-radius:30px !important;
+   
+  // }
+  
+//   overflow: auto; 
+//   .scroll-content {
+//     overflow: auto;  /* redundant, but just in case */
+//     display: flex; /* redundant, but just in case */
+//     flex-direction: column-reverse;
+// }
+  .popover-md .popover-content {
+    max-height: 40%;
+    overflow: auto;
+    max-width: 50%;
+}
+// .popover{
+//   max-width : 400px;
+//     height:250px;     /* Max Width of the popover (depending on the container!) */
+// }
+  ion-icon {
+    font-size: 30px; //Preferred size here
+  }
+  ion-footer {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+    background-color: #fff;
+    height: 255px;
+  }
+  .btnclass{
+    border-bottom: solid 1px #898989!important;
+    padding-left: 0!important;
+    align-items: center!important;
+    text-align: center;
+    color: blue;
+    &:last-child{
+      border-bottom: solid 0px!important;
+    }
+  }
+  .time {
+    color: #dfdfdf;
+    float: right;
+    font-size: small;
+  }
+  .line-breaker {
+    white-space: pre-line;
+  }
+
+  .input-wrap {
+    padding: 5px;
+    display: flex;
+  }
+  .input-wrap textarea {
+    flex: 1;
+    border: 0;
+    resize: none;
+    background-color: transparent;
+    border-bottom: 1px #387ef5;
+    border-style: solid;
+  }
+
+  .message-wrap {
+    padding: 0 10px;
+  }
+  .message-wrap .message {
+    position: relative;
+    padding: 7px 0;
+  }
+  .message-wrap .message .user-img {
+    position: absolute;
+    border-radius: 45px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.36);
+  }
+  .message-wrap .message .msg-detail {
+    width: 100%;
+    display: inline-block;
+  }
+  .message-wrap .message .msg-detail p {
+    margin: 0;
+  }
+  .message-wrap .message .msg-detail .msg-info p {
+    font-size: 0.8em;
+    color: #888;
+  }
+  .message-wrap .message .msg-detail .msg-content {
+    position: relative;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: black;
+    width: auto;
+    max-width: 80%;
+  }
+  .message-wrap .message .msg-detail .msg-content span.triangle {
+    background-color: #fff;
+    border-radius: 2px;
+    height: 8px;
+    width: 8px;
+    top: 12px;
+    display: block;
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .message-wrap .message.left .msg-content {
+    background-color: #27b087;
+    float: left;
+  }
+  .message-wrap .message.left .msg-detail {
+     padding-left: 48px;
+  }
+  .message-wrap .message.left .user-img {
+    left: 0;
+  }
+  .message-wrap .message.left .msg-detail .msg-content {
+    color: #343434;
+  }
+  .message-wrap .message.left .msg-detail .msg-content span.triangle {
+    border-top-width: 0;
+    border-right-width: 0;
+    left: -5px;
+  }
+  .message-wrap .message.right .msg-detail {
+     padding-right: 48px;
+  }
+  .message-wrap .message.right .msg-detail .msg-info {
+    text-align: right;
+  }
+  .message-wrap .message.right .user-img {
+    right: 0;
+  }
+  .message-wrap .message.right ion-spinner {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+  }
+  .message-wrap .message.right .msg-detail .msg-content {
+    background-color: #a7b5d8;
+    color:#fff;
+    font-size:13px;
+    float: right;
+  }
+  .message-wrap .message.right .msg-detail .msg-content span.triangle {
+    background-color: #04436a;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    right: -5px;
+  }
+}
+.popover{
+  max-width: 50%; // Max Width of the popover (depending on the container!)
+}
+.cardBox{
+  position: relative;
+  height: 100%;
+  & .centerAligning{
+   
+    position: absolute;
+    z-index: 999;
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    &.left{
+      left:0;
+    }&.right{
+      right:0;
+    }
+  }
+}
+

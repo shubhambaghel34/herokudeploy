@@ -1,0 +1,80 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button>
+        <ion-icon ios="ios-ionitron" md="md-ionitron"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>IHG Chatbot</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="message-wrap">
+    <div *ngFor="let msg of msgList" class="message" [class.left]="msg.type === 'fromuser'"
+      [class.right]="msg.type === 'touser'">
+      <div *ngIf="msg.messageType === 'string'">
+        <img class="user-img" [src]="msg.useravatar" alt="">
+        <!-- <ion-spinner name="dots"></ion-spinner> -->
+        <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
+        <div class="msg-detail">
+          <div class="msg-info">
+            <p>{{msg.userName}}</p>
+          </div>
+          <div class="msg-content">
+            <p class="line-breaker">{{msg.message}}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="msg.messageType === 'Middleware_call'" class="cardBox">
+        
+        <ion-slides (ionSlideDidChange)="slideChange()" initialSlide="0">
+            
+          <ion-slide *ngFor="let item of jsdata" > 
+            <ion-card>
+              <img src="{{item.hotelImage}}">
+              <ion-card-content text-left>
+                <ion-card-title ion-text> {{item.hotelName}} </ion-card-title>
+                <label>BrandName:{{item.brandName}}</label>
+                <label>Address: {{item.address}}</label>
+                <label text-left>PhoneNumber: {{item.phoneNumber}}</label>
+<ion-list no-lines >
+ <button ion-item class="btnclass"  detail-none (click)="selectroomLinkButton()" >Select Room </button>  
+  <button ion-item class="btnclass"  detail-none   (click)="selectLiveChat()"  >Live Chat</button>
+  
+
+</ion-list>
+              
+              </ion-card-content>
+
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+        <button ion-button icon-only color="light" class="centerAligning left" [disabled]="backButtonShow" (click)="prevButton()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </button>
+        <button ion-button icon-only color="light" class="centerAligning right" [disabled]="nextButtonShow" (click)="nextButton()">
+            <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </div>
+    </div>
+   
+  </div>
+</ion-content>
+<ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
+  <div class="input-wrap">
+    <textarea #Msg_input placeholder="{{textvalue}}" [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()"
+      (focusin)="focus()">
+    </textarea>
+    <button ion-button clear icon-only item-right (click)="sendMsg()">
+      <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+    </button>
+  </div>
+</ion-footer>

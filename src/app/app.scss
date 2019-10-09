@@ -1,0 +1,62 @@
+// http://ionicframework.com/docs/theming/
+
+ion-app{
+    &.md, &.ios{
+    font-size: 14px;
+    & .popover-content{
+        width: 100%;
+        max-width: calc(100% - 32px);
+        font-size: 1.7rem;
+        bottom: 120px;
+        left: 0!important;
+        right: 0px!important;
+        margin: 0 auto;
+        max-height: calc(100% - 140px);
+        top: auto!important;
+        min-height: calc(100% - 140px);
+        @media screen and (min-width: 480px){
+          max-width: 360px!important;
+          min-height: 465px !important;
+          left: auto!important;
+          right: 18px!important;
+        }
+         & ion-content{
+            position: absolute;
+            margin-bottom: 55px;
+            height: calc(100% - 55px);
+            max-height: calc(100% - 55px);
+            overflow: auto;
+         }
+         & .scroll-content{
+            margin-bottom: 0!important;
+        }
+        }
+    }   
+    @media (min-width: 567px) {
+        map, div[map] {
+          width: 95%;
+          height: 425px;
+        }
+      }
+      
+      /* Small devices such as phone */
+      @media (max-width: 567px) {
+        map, div[map] {
+          width: 90%;
+          height: 325px;
+        }
+      }
+}
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
