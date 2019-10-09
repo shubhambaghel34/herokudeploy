@@ -41,15 +41,17 @@
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.29",
-    "typescript": "~2.6.2"
+    "@ionic/app-scripts": "^3.2.4",
+    "typescript": "~2.6.2",
+   
   },
   "devDependencies": {
-    "@ionic/app-scripts": "^3.2.4",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^4.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.2"
+    
   },
   "description": "An Ionic project",
   "cordova": {
